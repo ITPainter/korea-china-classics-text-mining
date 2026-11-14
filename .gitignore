@@ -1,0 +1,12 @@
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+ai_log.csv
+build/
+dist/
+.DS_Store
+data/
+notebooks/data/

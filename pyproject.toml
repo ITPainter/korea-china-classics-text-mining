@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kclit"
+version = "0.1.0"
+description = "『서유기』에서 『구운몽』까지, 데이터로 읽다 실습 코드"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "이현정"}, {name = "최용욱"}]
+requires-python = ">=3.10"
+dependencies = [
+    "kiwipiepy>=0.18",
+    "jieba>=0.42",
+    "opencc-python-reimplemented>=0.1.7",
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "networkx",
+    "matplotlib",
+    "requests",
+    "beautifulsoup4",
+]
+
+[project.optional-dependencies]
+models = ["gensim", "sentence-transformers", "transformers"]
+llm = ["anthropic>=2.8"]
+
+[tool.setuptools.packages.find]
+include = ["kclit*"]
